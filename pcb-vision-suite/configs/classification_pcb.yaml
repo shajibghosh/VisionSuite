@@ -1,0 +1,14 @@
+# Fine-tune a classifier on PCB component crops (31 classes, heavily skewed).
+model: convnext_v2             # see: python scripts/train_classification.py --list
+manifest: data/pcb/classification/manifest.csv
+epochs: 30
+batch_size: 64
+lr: 3.0e-4
+weight_decay: 0.05
+layer_decay: 0.75              # layer-wise LR decay for ViT-family backbones
+balance: sampler               # sampler | loss | none  (handles class skew)
+mixup: 0.2
+label_smoothing: 0.1
+val_frac: 0.2
+patience: 10
+seed: 42

@@ -1,0 +1,22 @@
+# Core
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+pillow>=10.0
+pyyaml>=6.0
+
+# Model zoos
+timm>=1.0.0                       # 13 classification backbones
+transformers>=4.44                # DETR family, SegFormer, Mask2Former
+ultralytics>=8.2                  # YOLOv8 / YOLO11 / RT-DETR
+segmentation-models-pytorch>=0.3.4
+
+# Metrics & logging
+torchmetrics[detection]>=1.4      # COCO mAP
+pycocotools>=2.0.7
+tensorboard>=2.15
+matplotlib>=3.8
+
+# Web app
+streamlit>=1.36
+pandas>=2.0

@@ -1,0 +1,16 @@
+# Instance segmentation on PCB (rect masks synthesised from boxes).
+model: maskrcnn_v2             # see: python scripts/train_segmentation.py --list
+ann_file: data/pcb/detection/annotations_tiled.json
+epochs: 25
+batch_size: 2
+lr: 2.0e-4
+val_frac: 0.2
+patience: 8
+seed: 42
+
+# --- semantic alternative (needs image/mask pairs) ---
+# model: segformer
+# seg_manifest: data/yourset/seg_manifest.csv
+# class_names: [background, pad, trace, via]
+# img_size: 512
+# batch_size: 8

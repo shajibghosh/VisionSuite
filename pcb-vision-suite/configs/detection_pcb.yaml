@@ -1,0 +1,14 @@
+# Fine-tune a detector on the tiled PCB dataset.
+# Any key here can be overridden on the CLI, e.g. --model yolo11 --epochs 100
+model: faster_rcnn_v2          # see: python scripts/train_detection.py --list
+ann_file: data/pcb/detection/annotations_tiled.json
+epochs: 25
+batch_size: 4
+lr: 5.0e-4
+weight_decay: 1.0e-4
+val_frac: 0.2
+amp: true
+grad_clip: 10.0
+accumulate: 1                  # raise to simulate bigger batches
+patience: 8
+seed: 42
