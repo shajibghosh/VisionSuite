@@ -1,4 +1,4 @@
-# VisionSuite — PCB Component Detection, Classification & Segmentation
+# PCB-Vision-Suite — PCB Component Detection, Classification & Segmentation
 
 A unified, scalable fine-tuning suite covering **14 detection**, **13
 classification**, and **15 segmentation** SOTA architectures, with universal
